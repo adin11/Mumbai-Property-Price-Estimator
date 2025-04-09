@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+        <title>Real Estate Price Prediction</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet"
+              href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+    
+<body>
+    <h1>Get Estimated Costs For Your Desired Property in Mumbai</h1>
+    <h3>Enter the property details below</h3>
+
+    <!-- For handling error messages and redirecting to homepage after refresh -->  
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="error-container">
+        {% for message in messages %}
+          <p class="error">{{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+  
+    <form action="/predict" method="post">
+        {% if error %}
+    <p style="color: red;">Error: {{ error }}</p>
+     {% endif %}
+
+        <label>Property Type:</label>
+        <select name="property_type">
+            <option value="0" >New</option>
+            <option value="1">Resale</option>
+        </select><br><br>
+
+        <label>Furnish Status:</label>
+        <select name="furnish_status">
+            <option value="0">Unfurnished</option>
+            <option value="1">Semi-furnished</option>
+            <option value="2">Fully-furnished</option>
+        </select><br><br>
+
+        <label>Bedrooms:</label><input type="number" name="bedrooms" min="1" max="5"><br><br>
+        <label>Carpet Area (sqft):</label><input type="number" name="carpet_area" min="140"><br><br>
+        <label>Bathrooms:</label><input type="number" name="bathrooms" max="5" min="1"><br><br>
+        <label>Balconies:</label><input type="number" name="balconies" min="0" max="5"><br><br>
+         
+        <label>Location:</label>
+        <input list="locations" name="location">
+        <datalist id="locations">
+            {% for loc in locations %}
+                <option value="{{ loc }}">
+            {% endfor %}
+        </datalist><br><br>
+
+        <input type="submit" value="Predict" class="submit-btn">
+    </form>
+</body>
+</html>
