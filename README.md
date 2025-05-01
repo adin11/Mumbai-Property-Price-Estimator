@@ -14,7 +14,7 @@ Banner [source](https://banner.godori.dev/)
 ## 🔍 Business Problem
 Property buying in Mumbai can be confusing with significant price variation across locations, property types, and builder reputations. This app helps homebuyers, sellers, and investors make informed pricing decisions by estimating property prices using machine learning — in real-time and without manual guesswork.
 
-> 🧠 **Key Findings:**  
+## 🧠 **Key Findings:**  
 > Properties located in central Mumbai with higher square footage and proximity to transit hubs command premium prices.  
 > Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy.  
 > After tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
