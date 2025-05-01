@@ -8,8 +8,7 @@ Banner [source](https://banner.godori.dev/)
 ![License](https://img.shields.io/badge/License-MIT-green)
 [![Flask App](https://img.shields.io/badge/Flask-Web%20App-blue)](https://mumbaipriceteller.on.render.com)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-
----
+-- 
 # 🏠 Mumbai Property Price Estimator
 #### AppLink - https://mumbaipriceteller.onrender.com
 --
