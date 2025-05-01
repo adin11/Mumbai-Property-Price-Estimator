@@ -10,20 +10,16 @@ Banner [source](https://banner.godori.dev/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ---
-
 # 🏠 Mumbai Property Price Estimator
-
-**Know the Price Before You Buy –**  
-Mumbai’s Property Market Made Predictable with Data & Machine Learning
-
----
-
 ## 🔍 Business Problem
-
 Property buying in Mumbai can be confusing with significant price variation across locations, property types, and builder reputations. This app helps homebuyers, sellers, and investors make informed pricing decisions by estimating property prices using machine learning — in real-time and without manual guesswork.
 
----
+> 🧠 **Key Findings:**  
+> Properties located in central Mumbai with higher square footage and proximity to transit hubs command premium prices.  
+> Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy.  
+> After tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
 
+---
 ## 📊 Data Source
 
 - Data scraped from [MagicBricks](https://www.magicbricks.com/) using Scrapy via API Web Scraping.
