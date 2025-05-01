@@ -33,12 +33,15 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 
 ## ⚙️ Methods
 
-- **Data Scraping & Storage:** Scrapy used to pull data from MagicBricks’ backend API. Structured into SQLite database.
+- **Data Scraping & Storage:** Scrapy used to pull data from MagicBricks’ backend API. Structured it into a SQLite database. Established connection with the database using sqlite3 library.
+- **Data Cleaning and Transformations:**  Imputed Null Values , dropped some null values from different columns also fixed column datatypes and converted transfromed column values.
+- **Outlier Handling:** Plotted Box plots for Visualizing Outliers, Handled outliers in different numeric column based on domain knowledge.
 - **Univariate & Bivariate Analysis:** Used histograms, scatterplots, and countplots to explore distributions and variable relationships.
 - **Correlation Analysis:**  
   - Pearson correlation heatmap for numerical features.  
   - ANOVA F-test for evaluating categorical feature importance.
-- **Feature Engineering & Encoding:**  
+- **Feature Engineering & Encoding:**
+  - Dropped Columns which did not affect the target price.  
   - Added `price_per_sqft` as a derived metric.  
   - Target Encoding applied to `location` for better model input.
 - **Model Training & Evaluation:**  
@@ -53,9 +56,9 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 ## 🧱 Tech Stack
 
 - **Python** (3.10+)
-- **Scrapy** (for API scraping)
-- **SQLite3** (for data storage)
-- **Pandas, NumPy, Matplotlib, Seaborn** (EDA & visualization)
+- **Scrapy** (for API Scraping)
+- **SQLite3** (for Data Storage)
+- **Pandas, NumPy, Matplotlib, Seaborn** (EDA & Visualization)
 - **Scikit-learn & XGBoost** (model training & tuning)
 - **Flask** (API and backend interface)
 - **Render** (for app deployment)
