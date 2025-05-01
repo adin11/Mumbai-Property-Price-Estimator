@@ -48,8 +48,9 @@ Property Buying in Mumbai can be confusing with significant price variation acro
   - Trained and evaluated Linear Regression, Ridge, Random Forest, and XGBoost.  
   - Developed a metric evaluation function for automated comparison.
 - **Model Tuning & Performance Boost:**  
-  - Fine-tuned XGBoost model with hyperparameters.  
-  - Reduced error from **7.14% ➝ 1%**, improved R² from **0.92 ➝ 0.99**.
+  - Fine-tuned XGBoost model with hyperparameters.
+  - Saved the Tuned Model for predictions, Calculated residuals and residuals_pct and visualized the margin of error. Using feature engineering handled margin of erorr.  
+  - Reduced Margin of Error from **7.14% ➝ 1%**, improved R² from **0.92 ➝ 0.99**.
 
 ---
 
@@ -76,7 +77,7 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 ### 3. BarChart of Localities with Lowest avg_price of Properties.   
 ![Barchart](assets/low_avg.png)
 
-### 4. Co-Relation Matrix: Visualizing the Co-relation between of different features affecting the target.
+### 4. Co-Relation Matrix: Visualizing the Co-relation of different features affecting the target.
 ![Heatmaps](assets/corelation.png)
 
 ### 5. BarChart of Localities with Highest avg_price of Properties.  
@@ -85,21 +86,32 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 ### 6. ScatterPlot: Relationships of Different features with the Target(Price).
 ![Scatter Plot](assets/scatter.png)
 
-### 📈 Top Performing Model:
 
-| Model              | R² Score | Error Margin |
-|--------------------|----------|---------------|
-| XGBoost (tuned)    | 0.99     | 1%            |
-| Random Forest      | 0.96     | ~2.5%         |
-| Linear Regression  | 0.92     | ~7.14%        |
+### 📈 Visualizng Model Performance, Error Margin, Metrics:
+
+### Model Metrics Without Feature Enginerring:
+**We are checking for Error margin >10% , meaning for how many records the model predicted price more or less than 10%**
+
+| Model              | R² Score | Error Margin > 10| 
+|--------------------|----------|---------------   |
+| XGBoost            | 0.97     | 7.76%            |
+| Random Forest      | 0.98     | 7.14%            |
+| Linear Regression  | 0.89     | 9.12%            |
+
+
+### Model Metrics After Feature Enginerring: (Generated price_per_sqrft for better model interability) 
+
+| Model              | R² Score | Error Margin > 10|
+|--------------------|----------|----------------  |
+| XGBoost (tuned)    | 0.93     | 1%               |
+| Random Forest      | 0.99     | 2%               |
+| Linear Regression  | 1.00     | 4%               | 
 
 ✅ Final Model Used: **XGBoost (with hyperparameter tuning)**  
 🎯 Metric Used: **R² Score & Error Margin**
-
 ---
 
 ## 🚀 Deployment
-
 - The model is deployed using Flask and hosted on **Render**.
 - REST API created for real-time price predictions.
 - Scalable architecture to allow future city integrations.
@@ -120,5 +132,5 @@ This project is licensed under the MIT License. Feel free to use, fork, and impr
 ---
 
 ### 👤 Author
-Created by **Adin Raja** – [LinkedIn]((https://www.linkedin.com/in/adinraja78/))
+Created by **Adin Raja** – [LinkedIn](https://www.linkedin.com/in/adinraja78/)
 ---
