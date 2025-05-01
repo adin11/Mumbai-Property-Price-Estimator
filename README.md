@@ -71,7 +71,7 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 ![Count plot](assets/count.png)
 
 ### 2. Barchart of No of Flat listings per location (Top10)  
-![Barchart](assets/flat list.png)
+![Barchart](assets/flat_list.png)
 
 ### 3. BarChart of Localities with Lowest avg_price of Properties.   
 ![Barchart](assets/low_avg.png)
