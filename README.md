@@ -67,17 +67,20 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 
 ## 🔥 Key Results & Visuals
 
-### 1. Correlation Heatmap  
-*(Add your heatmap image here)*  
-![heatmap](assets/heatmap.png)
+### 1. CountPlot of Categorical variables   
+![Count plot](assets/count.png)
 
-### 2. Model Evaluation  
-*(Add your performance summary or metric comparison table screenshot here)*  
-![model_eval](assets/model_eval.png)
+### 2. Barchart of No of Flat listings per location (Top10)  
+![Barchart](assets/flat list.png)
 
-### 3. Web App Screenshot  
-*(Add screenshot of your deployed Flask app here)*  
-![app_screenshot](assets/app_ui.png)
+### 3. BarChart of Localities with Lowest avg_price of Properties.   
+![Barchart](assets/low_avg.png)
+
+### 4. BarChart of Localities with Highest avg_price of Properties.  
+![Barchart](assets/high_avg.png)
+
+### 5. ScatterPlot: Relationships of Different features with the Target(Price).
+![Scatter Plot](assets/scatter.png)
 
 ### 📈 Top Performing Model:
 
