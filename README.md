@@ -16,7 +16,7 @@ Banner [source](https://banner.godori.dev/)
 🎥 **[Watch Demo Video](link_to_your_video_here)** – See the app in action predicting Mumbai property prices in real time!
 
 ## 🔍 Business Problem
-Property buying in Mumbai can be confusing with significant price variation across locations, property types, and builder reputations. This app helps homebuyers, sellers, and investors make informed pricing decisions by estimating property prices using machine learning — in real-time and without manual guesswork.
+Property Buying in Mumbai can be confusing with significant price variation across various locations, property types, carpet area, furnish status etc. This app uses machine learning alogortihms and complex data analytical techniques to help homebuyers, sellers, and investors make informed pricing decisions by estimating Real-time property prices across Mumbai.
 
 ## 🧠 **Key Findings:**  
 > Properties located in central Mumbai with higher square footage and proximity to transit hubs command premium prices.  
