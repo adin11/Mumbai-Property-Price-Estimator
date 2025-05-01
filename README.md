@@ -104,14 +104,9 @@ Property buying in Mumbai can be confusing with significant price variation acro
 ---
 
 ## 🧾 License
-
 This project is licensed under the MIT License. Feel free to use, fork, and improve upon it.
-
 ---
 
 ### 👤 Author
-
-Created by **[Your Name]** – [LinkedIn](https://www.linkedin.com/in/your-link/) • [GitHub](https://github.com/your-username)
-
+Created by **Adin Raja** – [LinkedIn]((https://www.linkedin.com/in/adinraja78/))
 ---
-
