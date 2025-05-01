@@ -12,7 +12,6 @@ Banner [source](https://banner.godori.dev/)
 ---
 # 🏠 Mumbai Property Price Estimator
 ### https://mumbaipriceteller.onrender.com
-![app_screenshot](assets/app_ui.png)  
 
 🎥 **[Watch Demo Video](link_to_your_video_here)** – See the app in action predicting Mumbai property prices in real time!
 
