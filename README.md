@@ -11,7 +11,7 @@ Banner [source](https://banner.godori.dev/)
 
 ---
 # 🏠 Mumbai Property Price Estimator
-### https://mumbaipriceteller.onrender.com
+#### AppLink - https://mumbaipriceteller.onrender.com
 
 🎥 **[Watch Demo Video](link_to_your_video_here)** – See the app in action predicting Mumbai property prices in real time!
 
@@ -99,7 +99,7 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 | Linear Regression  | 0.89     | 9.12%            |
 
 
-### Model Metrics After Feature Enginerring: (Generated price_per_sqrft for better model interability) 
+### Model Metrics After Feature Enginerring: (Generated price_per_sqrft for better model interpretability) 
 
 | Model              | R² Score | Error Margin > 10|
 |--------------------|----------|----------------  |
@@ -132,5 +132,6 @@ This project is licensed under the MIT License. Feel free to use, fork, and impr
 ---
 
 ### 👤 Author
-Created by **Adin Raja** – [LinkedIn](https://www.linkedin.com/in/adinraja78/)
+Developed and Documented by Adin Raja **Adin Raja** – [LinkedIn](https://www.linkedin.com/in/adinraja78/), [Gmail](adinraja78@gmail.com)
+
 ---
