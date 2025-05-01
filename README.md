@@ -4,15 +4,15 @@ Banner [source](https://banner.godori.dev/)
 
 ![Python version](https://img.shields.io/badge/Python%20version-3.10%2B-lightgrey)
 ![GitHub last commit](https://img.shields.io/github/last-commit/your-username/mumbai-property-price-estimator)
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/mumbai-property-price-estimator)
 ![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Regression-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-link)
+[![Flask App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://mumbaipriceteller.on.render.com)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ---
 # 🏠 Mumbai Property Price Estimator
 ### https://mumbaipriceteller.onrender.com
+
 ## 🔍 Business Problem
 Property buying in Mumbai can be confusing with significant price variation across locations, property types, and builder reputations. This app helps homebuyers, sellers, and investors make informed pricing decisions by estimating property prices using machine learning — in real-time and without manual guesswork.
 
