@@ -131,6 +131,6 @@ This project is licensed under the MIT License. Feel free to use, fork, and impr
 ---
 
 ### 👤 Author
-Developed and Documented by Adin Raja **Adin Raja** – [LinkedIn](https://www.linkedin.com/in/adinraja78/), [Gmail](adinraja78@gmail.com)
+Developed and Documented by Adin Raja **Adin Raja** – [LinkedIn](https://www.linkedin.com/in/adinraja78/), [Gmail](mailto::adinraja78@gmail.com)
 
 ---
