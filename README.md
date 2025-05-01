@@ -6,7 +6,7 @@ Banner [source](https://banner.godori.dev/)
 ![GitHub last commit](https://img.shields.io/github/last-commit/adin11/mumbai-property-price-estimator)
 ![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Regression-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![Flask App](https://img.shields.io/badge/Flask-Web%20App-lightblue)](https://mumbaipriceteller.on.render.com)
+[![Flask App](https://img.shields.io/badge/Flask-Web%20App-blue)](https://mumbaipriceteller.on.render.com)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ---
