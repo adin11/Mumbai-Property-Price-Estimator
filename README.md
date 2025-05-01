@@ -76,10 +76,13 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 ### 3. BarChart of Localities with Lowest avg_price of Properties.   
 ![Barchart](assets/low_avg.png)
 
-### 4. BarChart of Localities with Highest avg_price of Properties.  
+### 4. Co-Relation Matrix: Visualizing the Co-relation between of different features affecting the target.
+![Heatmaps](assets/corelation.png)
+
+### 5. BarChart of Localities with Highest avg_price of Properties.  
 ![Barchart](assets/high_avg.png)
 
-### 5. ScatterPlot: Relationships of Different features with the Target(Price).
+### 6. ScatterPlot: Relationships of Different features with the Target(Price).
 ![Scatter Plot](assets/scatter.png)
 
 ### 📈 Top Performing Model:
