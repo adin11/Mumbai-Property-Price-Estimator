@@ -15,13 +15,13 @@ Banner [source](https://banner.godori.dev/)
 ## 🔍 Business Problem
 Property Buying in Mumbai can be confusing with significant price variation across various locations, property types, carpet area, furnish status etc. This app uses machine learning alogortihms and complex data analytical techniques to help homebuyers, sellers, and investors make informed pricing decisions by estimating Real-time property prices across Mumbai.
 
-## 🧠 **Key Findings:**  
-> Majority of the Flat listings are new properties which are Unfurnished.
-> The Western and southern belt of mumbai has high property prices as compared to others.
-> The Northern Belt of mumbai has affordable and less property prices.
-> The Maximum No property were listed from bhandup, andheri, Mulund.
-> Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
-> After tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
+## 🧠 Key Findings: 
+1. Majority of the Flat listings are new properties which are Unfurnished.
+2. The Western and southern belt of mumbai has high property prices as compared to others.
+3. The Northern Belt of mumbai has affordable and less property prices.
+4. The Maximum No property were listed from bhandup, andheri, Mulund.
+5. Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
+6. After tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
 
 ---
 ## 📊 Data Source
