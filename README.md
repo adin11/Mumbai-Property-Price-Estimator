@@ -21,7 +21,7 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 3. The Northern Belt of mumbai has affordable and less property prices.
 4. The Maximum No property were listed from bhandup, andheri, Mulund.
 5. Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
-6. After tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
+6. After Fine Tuning and creating new features, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
 
 ---
 ## 📊 Data Source
