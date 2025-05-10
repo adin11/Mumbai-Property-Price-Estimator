@@ -8,16 +8,16 @@ Banner [source](https://banner.godori.dev/)
 ![License](https://img.shields.io/badge/License-MIT-green)
 [![Flask App](https://img.shields.io/badge/Flask-Web%20App-blue)](https://mumbaipriceteller.on.render.com)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
--- 
+
 # 🏠 Mumbai Property Price Estimator
 #### AppLink - https://mumbaipriceteller.onrender.com
-
+---
 ## 🔍 Business Problem
 Property Buying in Mumbai can be confusing with significant price variation across various locations, property types, carpet area, furnish status etc. This app uses machine learning alogortihms and complex data analytical techniques to help homebuyers, sellers, and investors make informed pricing decisions by estimating Real-time property prices across Mumbai.
 --- 
 ## Overview
 This project presents a full-stack machine learning solution for real-time property price estimation in Mumbai. It combines dynamic data scraping from MagicBricks with automated ETL workflows and advanced regression models to deliver accurate pricing insights. Using Flask for deployment and SQLite for lightweight data management, the system provides a seamless experience for users seeking property valuations.
-
+---
 ---
 ## 🧠 Key Findings: 
 1. Majority of the Flat listings are new properties which are Unfurnished.
