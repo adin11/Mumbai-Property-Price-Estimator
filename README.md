@@ -19,7 +19,7 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 This project presents a full-stack machine learning solution for real-time property price estimation in Mumbai. It combines dynamic data scraping from MagicBricks with automated ETL workflows and advanced regression models to deliver accurate pricing insights. Using Flask for deployment and SQLite for lightweight data management, the system provides a seamless experience for users seeking property valuations.
 
 ## Demo
-https://github.com/adin11/Mumbai-Property-Price-Estimator/raw/main/property_video.mp4
+https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 ## Power BI Dashboard:
 ![dashboard](assets/dashboard.png)
