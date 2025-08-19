@@ -10,7 +10,7 @@ Banner [source](https://banner.godori.dev/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # 🏠 Mumbai Property Price Estimator
-#### [MumbaiPriceTeller](https://mumbaipriceteller.onrender.com)
+#### Live Site - [MumbaiPriceTeller](https://mumbaipriceteller.onrender.com)
 
 ## 🔍 Business Problem
 Buying a property in Mumbai is often confusing because prices vary widely depending on the location, property type, size (carpet area), and furnishing status. This lack of clarity makes it difficult for homebuyers to know if they are paying a fair price, for sellers to set the right price, and for investors to identify good opportunities.
@@ -33,17 +33,13 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 5. Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
 6. After feature engineering and fine-tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
 
-## 📊 Data Source
-- Data scraped from [MagicBricks](https://www.magicbricks.com/) using Scrapy via MagicBricks Backend Api.
-- Stored in SQLite3 database for easy access and analysis.
-
 
 ## Technical Details
 
-- **Data Scraping & Storage:** Scrapy used to pull data from MagicBricks’ backend API. Structured it into a SQLite database. Established connection with the database using sqlite3 library.
-- **Data Cleaning and Transformations:**  Imputed Null Values , dropped some null values from different columns also fixed column datatypes and converted transfromed column values.
-- **Outlier Handling:** Plotted Box plots for Visualizing Outliers, Handled outliers in different numeric column based on domain knowledge.
-- **Univariate & Bivariate Analysis:** Used histograms, scatterplots, and countplots to explore distributions and variable relationships.
+- `**Data Scraping & Storage:**` Scrapy used to pull data from MagicBricks’ backend API. Structured it into a SQLite database. Established connection with the database using sqlite3 library.
+- `**Data Cleaning and Transformations:**`  Imputed Null Values , dropped some null values from different columns also fixed column datatypes and converted transfromed column values.
+- `**Outlier Handling:**` Plotted Box plots for Visualizing Outliers, Handled outliers in different numeric column based on domain knowledge.
+- `**Univariate & Bivariate Analysis:**` Used histograms, scatterplots, and countplots to explore distributions and variable relationships.
 - **Correlation Analysis:**  
   - Pearson correlation heatmap for numerical features.  
   - ANOVA F-test for evaluating categorical feature importance.
@@ -70,7 +66,7 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 - **Flask** (API and backend interface)
 - **Render** (for app deployment)
 
-### 📈 Visualizng Model Performance, Error Margin, Metrics:
+## 📈 Visualizng Model Performance, Error Margin, Metrics:
 
 ### Model Metrics Without Feature Enginerring:
 **We are checking for Error margin >10% , meaning for how many records the model predicted price more or less than 10%**
