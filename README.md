@@ -36,25 +36,21 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 ## Technical Details
 
-- `**Data Scraping & Storage:**` Scrapy used to pull data from MagicBricks’ backend API. Structured it into a SQLite database. Established connection with the database using sqlite3 library.
-- `**Data Cleaning and Transformations:**`  Imputed Null Values , dropped some null values from different columns also fixed column datatypes and converted transfromed column values.
-- `**Outlier Handling:**` Plotted Box plots for Visualizing Outliers, Handled outliers in different numeric column based on domain knowledge.
-- `**Univariate & Bivariate Analysis:**` Used histograms, scatterplots, and countplots to explore distributions and variable relationships.
-- **Correlation Analysis:**  
-  - Pearson correlation heatmap for numerical features.  
-  - ANOVA F-test for evaluating categorical feature importance.
-- **Feature Engineering & Encoding:**
-  - Dropped Columns which did not affect the target price.  
-  - Added `price_per_sqft` as a derived metric.  
-  - Target Encoding applied to `location` for better model input.
-- **Model Training & Evaluation:**  
-  - Trained and evaluated Linear Regression, Ridge, Random Forest, and XGBoost.  
-  - Developed a metric evaluation function for automated comparison.
-- **Model Tuning & Performance Boost:**  
-  - Fine-tuned XGBoost model with hyperparameters.
-  - Saved the Tuned Model for predictions, Calculated residuals and residuals_pct and visualized the margin of error. Using feature engineering handled margin of erorr.  
-  - Reduced Margin of Error from **7.14% ➝ 1%**, improved R² from **0.92 ➝ 0.99**.
+- `Data Scraping & Storage:` Scrapy used to pull data from MagicBricks’ backend API. Structured it into a SQLite database. Established connection with the database using python and sqlite3 library.
 
+- `Outlier Handling:` Plotted Box plots for Visualizing Outliers, Handled outliers in different numeric column based on domain knowledge.
+
+- `Univariate & Bivariate Analysis:` Used histograms, scatterplots, and countplots to explore distributions and variable relationships.
+
+- `Feature Engineering & Encoding:` Dropped Columns which did not affect the target price. Added `price_per_sqft` as a derived metric only for training the model, In Inference phase did not include `price_per_sqft`. Target Encoding applied to `location` for better model input.
+
+- `Model Training & Evaluation:`  
+  - Trained and evaluated Linear Regression, Ridge, Random Forest, and XGBoost.  
+  - Calculated metrics like train score, test score, r2 Score and **ERROR MARGIN**
+
+- `Model Fine-Tuning & Performance Boost:`
+  - Fine-tuned XGBoost model with hyperparameters.
+  - Saved the Tuned Model for predictions, Calculated residuals and residuals_pct and visualized the margin of error. Using feature engineering Reduced Margin of Error from **7.14% ➝ 1%**, improved R² from **0.92 ➝ 0.99**.
 
 ## 🧱 Tech Stack
 
