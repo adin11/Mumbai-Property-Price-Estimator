@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 - `Univariate & Bivariate Analysis:` Used histograms, scatterplots, and countplots to explore distributions and variable relationships.
 
-- `Feature Engineering & Encoding:` Dropped Columns which did not affect the target price. Added `price_per_sqft` as a derived metric only for training the model, In Inference phase did not include `price_per_sqft`. Target Encoding applied to `location` for better model input.
+- `Feature Engineering & Encoding:` Dropped Columns which did not affect the target price. Added `price_per_sqft` as a derived metric only for training the model, In Inference phase calculated `price_per_sqft` internally in the flask backend. Target Encoding applied to `location` for better model input.
 
 - `Model Training & Evaluation:`  
   - Trained and evaluated Linear Regression, Ridge, Random Forest, and XGBoost.  
@@ -51,16 +51,6 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 - `Model Fine-Tuning & Performance Boost:`
   - Fine-tuned XGBoost model with hyperparameters.
   - Saved the Tuned Model for predictions, Calculated residuals and residuals_pct and visualized the margin of error. Using feature engineering Reduced Margin of Error from **7.14% ➝ 1%**, improved R² from **0.92 ➝ 0.99**.
-
-## 🧱 Tech Stack
-
-- **Python** (3.10+)
-- **Scrapy** (for API Scraping)
-- **SQLite3** (for Data Storage)
-- **Pandas, NumPy, Matplotlib, Seaborn** (EDA & Visualization)
-- **Scikit-learn & XGBoost** (model training & tuning)
-- **Flask** (API and backend interface)
-- **Render** (for app deployment)
 
 ## 📈 Visualizng Model Performance, Error Margin, Metrics:
 
@@ -84,6 +74,24 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 ✅ Final Model Used: **XGBoost (with hyperparameter tuning)**  
 🎯 Metric Used: **R² Score & Error Margin**
+
+## 📂 Project Structure
+1. `app.py` - Flask backend code for serving the model
+2. `script.py` - Final Reproducable script for getting the trained model
+3. `model_db` - Jupyter file for prototyping 
+4. `spider.py` - Scrapy code for scraping the magic bricks Api
+5. `final_model.pkl` - Trained model as .pkl file
+
+## 🧱 Tech Stack
+
+- **Python** (3.10+)
+- **Scrapy** (for API Scraping)
+- **SQLite3** (for Data Storage)
+- **Pandas, NumPy, Matplotlib, Seaborn** (EDA & Visualization)
+- **Scikit-learn & XGBoost** (model training & tuning)
+- **Flask** (API and backend interface)
+- **Render** (for app deployment)
+
 
 ## 🔥 Key Results & Visuals
 
