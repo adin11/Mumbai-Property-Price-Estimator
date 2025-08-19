@@ -33,14 +33,12 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 5. Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
 6. After feature engineering and fine-tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
 
----
 ## 📊 Data Source
 - Data scraped from [MagicBricks](https://www.magicbricks.com/) using Scrapy via MagicBricks Backend Api.
 - Stored in SQLite3 database for easy access and analysis.
 
----
 
-## ⚙️ Methods
+## Technical Details
 
 - **Data Scraping & Storage:** Scrapy used to pull data from MagicBricks’ backend API. Structured it into a SQLite database. Established connection with the database using sqlite3 library.
 - **Data Cleaning and Transformations:**  Imputed Null Values , dropped some null values from different columns also fixed column datatypes and converted transfromed column values.
@@ -61,7 +59,6 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
   - Saved the Tuned Model for predictions, Calculated residuals and residuals_pct and visualized the margin of error. Using feature engineering handled margin of erorr.  
   - Reduced Margin of Error from **7.14% ➝ 1%**, improved R² from **0.92 ➝ 0.99**.
 
----
 
 ## 🧱 Tech Stack
 
@@ -72,8 +69,6 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 - **Scikit-learn & XGBoost** (model training & tuning)
 - **Flask** (API and backend interface)
 - **Render** (for app deployment)
-
----
 
 ### 📈 Visualizng Model Performance, Error Margin, Metrics:
 
@@ -98,8 +93,6 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 ✅ Final Model Used: **XGBoost (with hyperparameter tuning)**  
 🎯 Metric Used: **R² Score & Error Margin**
 
----
-
 ## 🔥 Key Results & Visuals
 
 ### 1. CountPlot of Categorical variables   
@@ -115,13 +108,9 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 ![Barchart](assets/high_avg.png)
 
 
----
-
 ## 💡 Future Improvements
 
 - Integrate live listings to keep model updated.
 - Run the reproducable script to get the trained model as .pkl
 - Tinker around the api and expand prediction to other metro cities.
 
-
----
