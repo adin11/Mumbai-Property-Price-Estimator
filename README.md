@@ -10,10 +10,20 @@ Banner [source](https://banner.godori.dev/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 -- 
 # 🏠 Mumbai Property Price Estimator
-#### AppLink - https://mumbaipriceteller.onrender.com
+#### [MumbaiPriceTeller](https://mumbaipriceteller.onrender.com)
 
 ## 🔍 Business Problem
-Property Buying in Mumbai can be confusing with significant price variation across various locations, property types, carpet area, furnish status etc. This app uses machine learning alogortihms and complex data analytical techniques to help homebuyers, sellers, and investors make informed pricing decisions by estimating Real-time property prices across Mumbai.
+Buying a property in Mumbai is often confusing because prices vary widely depending on the location, property type, size (carpet area), and furnishing status. This lack of clarity makes it difficult for homebuyers to know if they are paying a fair price, for sellers to set the right price, and for investors to identify good opportunities.
+
+## Overview
+This project presents a full-stack machine learning solution for real-time property price estimation in Mumbai. It combines dynamic data scraping from MagicBricks API, with ETL workflows and advanced predictive models to deliver accurate price estimations. Built with Flask and deployed on Render, this app makes it easy for users to check property valuations.
+
+## Demo
+https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
+
+## Power BI Dashboard:
+![dashboard](assets/dashboard.png)
+**Power Bi Dashboard for Analyzing How Property Prices Fluctuate across entire mumbai.**
 
 ## 🧠 Key Findings: 
 1. Majority of the Flat listings are new properties which are Unfurnished.
@@ -21,7 +31,7 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 3. The Northern Belt of mumbai has affordable and less property prices.
 4. The Maximum No property were listed from bhandup, andheri, Mulund.
 5. Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
-6. After tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
+6. After feature engineering and fine-tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
 
 ---
 ## 📊 Data Source
@@ -65,27 +75,6 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 
 ---
 
-## 🔥 Key Results & Visuals
-
-### 1. CountPlot of Categorical variables   
-![Count plot](assets/count.png)
-
-### 2. Barchart of No of Flat listings per location (Top10)  
-![Barchart](assets/flat_list.png)
-
-### 3. BarChart of Localities with Lowest avg_price of Properties.   
-![Barchart](assets/low_avg.png)
-
-### 4. Co-Relation Matrix: Visualizing the Co-relation of different features affecting the target.
-![Heatmaps](assets/corelation.png)
-
-### 5. BarChart of Localities with Highest avg_price of Properties.  
-![Barchart](assets/high_avg.png)
-
-### 6. ScatterPlot: Relationships of Different features with the Target(Price).
-![Scatter Plot](assets/scatter.png)
-
-
 ### 📈 Visualizng Model Performance, Error Margin, Metrics:
 
 ### Model Metrics Without Feature Enginerring:
@@ -108,29 +97,31 @@ Property Buying in Mumbai can be confusing with significant price variation acro
 
 ✅ Final Model Used: **XGBoost (with hyperparameter tuning)**  
 🎯 Metric Used: **R² Score & Error Margin**
+
 ---
 
-## 🚀 Deployment
-- The model is deployed using Flask and hosted on **Render**.
-- REST API created for real-time price predictions.
-- Scalable architecture to allow future city integrations.
+## 🔥 Key Results & Visuals
+
+### 1. CountPlot of Categorical variables   
+![Count plot](assets/count.png)
+
+### 2. BarChart of Localities with Lowest avg_price of Properties.   
+![Barchart](assets/low_avg.png)
+
+### 3. Co-Relation Matrix: Visualizing the Co-relation of different features affecting the target.
+![Heatmaps](assets/corelation.png)
+
+### 4. BarChart of Localities with Highest avg_price of Properties.  
+![Barchart](assets/high_avg.png)
+
 
 ---
 
 ## 💡 Future Improvements
 
 - Integrate live listings to keep model updated.
-- Expand prediction to other metro cities.
-- Add filters for user preferences like floor number, facing, etc.
-- Move toward a full frontend interface with map-based insights.
+- Run the reproducable script to get the trained model as .pkl
+- Tinker around the api and expand prediction to other metro cities.
 
----
-
-## 🧾 License
-This project is licensed under the MIT License. Feel free to use, fork, and improve upon it.
----
-
-### 👤 Author
-Developed and Documented by Adin Raja **Adin Raja** – [LinkedIn](https://www.linkedin.com/in/adinraja78/), [Gmail](adinraja78@gmail.com)
 
 ---
