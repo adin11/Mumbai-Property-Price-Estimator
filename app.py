@@ -7,10 +7,10 @@ app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)  # Generates a random secret key for session management
 
 # Load model and artifacts
-data = joblib.load("real_estate_model.pkl")
+data = joblib.load("model.pkl")
 model = data['model']
-location_encoding_map = data['location_encoding_map']
 location_names = data['location_names']
+location_encoding_map = data['location_encoding_map']
 
 @app.route('/')
 def home():
@@ -19,7 +19,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.form
-
+ 
     try:
         # Check for missing fields
         required_fields = ['property_type', 'furnish_status', 'bedrooms', 'carpet_area', 'bathrooms', 'balconies', 'location']
@@ -37,14 +37,10 @@ def predict():
         balconies = int(data['balconies'])
         location = data['location'].strip()
 
-        # Check if location is valid
-        if location not in location_encoding_map:
-            flash("❌ Selected location is not in the model's training data.")
-            return redirect('/')
-
-        # Encode location and calculate price per sqft
+        # Generating area per bedroom internally
+        area_per_bedroom = carpet_area / bedrooms
+        # Encoding location name 
         location_encoded = location_encoding_map[location]
-        price_per_sqrft = location_encoded / carpet_area
 
         input_data = pd.DataFrame([{
             "property_type": property_type,
@@ -53,13 +49,22 @@ def predict():
             "carpet_area": carpet_area,
             "bathrooms": bathrooms,
             "balconies": balconies,
-            "price_per_sqrft": price_per_sqrft,
-            "location_encoded": location_encoded
+            "location_encoded": location_encoded,
+            "area_per_bedroom": area_per_bedroom
+
         }])
 
         # Make prediction
         prediction = model.predict(input_data)[0]
-        return render_template('result.html', prediction=round(prediction, 2), location=location)
+
+        # Convert into lakhs
+        prediction_lakhs = round(prediction / 1e5, 2)
+
+        return render_template(
+            'result.html',
+            prediction=prediction_lakhs,
+            location=location
+        )
 
     except Exception as e:
         flash("❌ Something went wrong. Please try again.")

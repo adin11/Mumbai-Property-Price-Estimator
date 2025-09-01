@@ -1,13 +1,4 @@
-![banner](assets/banner.png)
-
 Banner [source](https://banner.godori.dev/)
-
-![Python version](https://img.shields.io/badge/Python%20version-3.10%2B-lightgrey)
-![GitHub last commit](https://img.shields.io/github/last-commit/adin11/mumbai-property-price-estimator)
-![Type of ML](https://img.shields.io/badge/Type%20of%20ML-Regression-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-[![Flask App](https://img.shields.io/badge/Flask-Web%20App-blue)](https://mumbaipriceteller.on.render.com)
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # 🏠 Mumbai Property Price Estimator
 #### Live Site - [MumbaiPriceTeller](https://mumbaipriceteller.onrender.com)
@@ -15,10 +6,10 @@ Banner [source](https://banner.godori.dev/)
 ## 🔍 Business Problem
 Buying a property in Mumbai is often confusing because prices vary widely depending on the location, property type, size (carpet area), and furnishing status. This lack of clarity makes it difficult for homebuyers to know if they are paying a fair price, for sellers to set the right price, and for investors to identify good opportunities.
 
-## Overview
+## Project Overview
 This project presents a full-stack machine learning solution for real-time property price estimation in Mumbai. It combines dynamic data scraping from MagicBricks API, with ETL workflows and advanced predictive models to deliver accurate price estimations. Built with Flask and deployed on Render, this app makes it easy for users to check property valuations.
 
-## Demo
+## Demo video
 https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 ## Power BI Dashboard:
@@ -30,8 +21,8 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 2. The Western and southern belt of mumbai has high property prices as compared to others.
 3. The Northern Belt of mumbai has affordable and less property prices.
 4. The Maximum No property were listed from bhandup, andheri, Mulund.
-5. Feature engineering, especially `price_per_sqft` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
-6. After feature engineering and fine-tuning, XGBoost achieved **99% R² score** and **1% error margin**, making it ideal for real-time price prediction.
+5. Feature engineering, especially `area per bedroom` and target encoding for `location`, significantly boosted model accuracy and reduced margin of error.  
+6. After feature engineering and fine-tuning, XGBoost achieved **99% R² score** and **6% error margin**, making it ideal for real-time price prediction.
 
 
 ## Technical Details
@@ -42,7 +33,7 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 - `Univariate & Bivariate Analysis:` Used histograms, scatterplots, and countplots to explore distributions and variable relationships.
 
-- `Feature Engineering & Encoding:` Dropped Columns which did not affect the target price. Added `price_per_sqft` as a derived metric only for training the model, In Inference phase calculated `price_per_sqft` internally in the flask backend. Target Encoding applied to `location` for better model input.
+- `Feature Engineering & Encoding:` Dropped Columns which did not affect the target price. Added `area per bedroom` as a derived metric only for training the model, In Inference phase calculated `area per bedroom` internally in the flask backend. Target Encoding applied to `location` for better model input.
 
 - `Model Training & Evaluation:`  
   - Trained and evaluated Linear Regression, Ridge, Random Forest, and XGBoost.  
@@ -50,7 +41,7 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 - `Model Fine-Tuning & Performance Boost:`
   - Fine-tuned XGBoost model with hyperparameters.
-  - Saved the Tuned Model for predictions, Calculated residuals and residuals_pct and visualized the margin of error. Using feature engineering Reduced Margin of Error from **7.14% ➝ 1%**, improved R² from **0.92 ➝ 0.99**.
+  - Saved the Tuned Model for predictions, Calculated residuals and residuals_pct and visualized the margin of error. Using feature engineering Reduced Margin of Error from **7.8% ➝ 6%**, improved R² from **0.97 ➝ 0.99**.
 
 ## 📈 Visualizng Model Performance, Error Margin, Metrics:
 
@@ -64,23 +55,22 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 | Linear Regression  | 0.89     | 9.12%            |
 
 
-### Model Metrics After Feature Enginerring: (Generated price_per_sqrft for better model interpretability) 
+### Model Metrics After Feature Enginerring: (Generated area per bedroom for better model interpretability) 
 
 | Model              | R² Score | Error Margin > 10|
 |--------------------|----------|----------------  |
-| XGBoost (tuned)    | 0.93     | 1%               |
-| Random Forest      | 0.99     | 2%               |
-| Linear Regression  | 1.00     | 4%               | 
+| XGBoost (tuned)    | 0.99     | 6.2%               |
+| Random Forest      | 0.99     | 6.8%               |
+| Linear Regression  | 0.93     | 8%               | 
 
 ✅ Final Model Used: **XGBoost (with hyperparameter tuning)**  
 🎯 Metric Used: **R² Score & Error Margin**
 
 ## 📂 Project Structure
 1. `app.py` - Flask backend code for serving the model
-2. `script.py` - Final Reproducable script for getting the trained model
-3. `model_db` - Jupyter file for prototyping 
-4. `spider.py` - Scrapy code for scraping the magic bricks Api
-5. `final_model.pkl` - Trained model as .pkl file
+2. `model_db` - Jupyter file for prototyping 
+3. `spider.py` - Scrapy code for scraping the magic bricks Api
+4. `model.pkl` - Trained model as .pkl file
 
 ## 🧱 Tech Stack
 
