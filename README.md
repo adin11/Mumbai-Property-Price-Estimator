@@ -1,5 +1,3 @@
-Banner [source](https://banner.godori.dev/)
-
 # 🏠 Mumbai Property Price Estimator
 #### Live Site - [MumbaiPriceTeller](https://mumbaipriceteller.onrender.com)
 
