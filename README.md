@@ -66,9 +66,10 @@ https://github.com/user-attachments/assets/225ad43f-6176-46ae-9910-f3ad5da2ec14
 
 ## 📂 Project Structure
 1. `app.py` - Flask backend code for serving the model
-2. `model_db` - Jupyter file for prototyping 
-3. `spider.py` - Scrapy code for scraping the magic bricks Api
-4. `model.pkl` - Trained model as .pkl file
+2. `training.ipnb` - Model training script without feature engineering
+3. `training_with_FE` - Model training script with feature engineering 
+4. `spider.py` - Scrapy code for scraping the magic bricks Api
+5. `model.pkl` - Trained model as .pkl file
 
 ## 🧱 Tech Stack
 
