@@ -1,7 +1,9 @@
+![banner](assets/banner.png)  
+
 # 🏠 Mumbai Property Price Estimator
 #### Live Site - [MumbaiPriceTeller](https://mumbaipriceteller.onrender.com)
 
-## 🔍 Business Problem
+## 🔍 Problem Statement
 Buying a property in Mumbai is often confusing because prices vary widely depending on the location, property type, size (carpet area), and furnishing status. This lack of clarity makes it difficult for homebuyers to know if they are paying a fair price, for sellers to set the right price, and for investors to identify good opportunities.
 
 ## Project Overview
